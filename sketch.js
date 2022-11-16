@@ -8,7 +8,6 @@ setup = () => {
 draw = () => {
   frame()
   dispNewData()
-  gameOver()
 }
 
 keyPressed = () =>{
@@ -20,27 +19,19 @@ keyPressed = () =>{
   }
   switch(keyCode){
     case UP_ARROW:
-      if(f===ture){
       upMove()
-      }
       endJudge()
       break
     case DOWN_ARROW:
-      if(f===ture){
       downMove()
-      }
       endJudge()
       break
     case RIGHT_ARROW:
-      if(f===ture){
       rightMove()
-      }
       endJudge()
       break
     case LEFT_ARROW:
-      if(f===ture){
       leftMove()
-      }
       endJudge()
       break
   }
@@ -87,7 +78,7 @@ gameOver = () => {
 }
 
   
-let f=false
+let f=true
 
 upMove = () =>{
   //x=j,y=i
@@ -128,6 +119,7 @@ downMove = () =>{
 }
 
 rightMove = () =>{
+  let f=false
   //x=j,y=i
   for(let c=0;c<3;c++){
     for(let i=0;i<3;i++){
@@ -349,6 +341,12 @@ numberConversion = (a) => {
     break
     case 5: //64
       a = "64"
+
+
+
+
+
+      
     break
     case 6: //128
       a = "128"
